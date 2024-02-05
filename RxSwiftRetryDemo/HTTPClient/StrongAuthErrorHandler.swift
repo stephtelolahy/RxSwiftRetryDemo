@@ -7,6 +7,11 @@
 
 typealias AuthenticationCallback = (Bool) -> Void
 
+protocol StrongAuthErrorHandling {
+    func isUnauthorizedError(_ error: Error) -> Bool
+    func handleUnauthorizedError(_ error: Error, callBack: @escaping AuthenticationCallback)
+}
+
 extension Error {
     var isSessionExpirationError: Bool {
         // TODO: implement
@@ -14,14 +19,13 @@ extension Error {
     }
 }
 
+struct StrongAuthErrorHandler: StrongAuthErrorHandling {
 
-struct StrongAuthErrorHandler {
-
-    static let shared: Self = .init()
-
-    func handleUnauthorizedError(callBack: @escaping AuthenticationCallback) {
-        // TODO: implement
-        callBack(true)
+    func isUnauthorizedError(error: Error) -> Bool {
+        true
     }
 
+    func handleUnauthorizedError(_ error: Error, callBack: @escaping AuthenticationCallback) {
+        callBack(true)
+    }
 }

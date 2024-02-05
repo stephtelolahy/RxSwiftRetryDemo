@@ -5,15 +5,9 @@
 //  Created by Hugues Telolahy on 05/02/2024.
 //
 
-
-import Moya
 import RxSwift
 import Alamofire
 import Foundation
-
-protocol HTTPClientErrorReporterProtocol: AnyObject {
-    func reportError(_ error: Error, userInfo: [String: String])
-}
 
 /// HTTPClient is used to call Api and return DTO object in Reactive way
 /// Builds `TargetTypeObject` needed for Moya request
@@ -22,11 +16,14 @@ struct HTTPClient {
 
     private let baseUrl: String
     private let moya: MoyaProvider<TargetTypeObject>
+    private let strongAuthErrorHandler: StrongAuthErrorHandling
 
     init(baseUrl: String,
          session: Session = MoyaProvider<TargetTypeObject>.defaultAlamofireSession(),
-         plugins: [PluginType] = []) {
+         plugins: [PluginType] = [],
+         strongAuthErrorHandler: StrongAuthErrorHandling) {
         self.baseUrl = baseUrl
+        self.strongAuthErrorHandler = strongAuthErrorHandler
         moya = MoyaProvider<TargetTypeObject>(session: session, plugins: plugins)
     }
 
@@ -39,9 +36,39 @@ struct HTTPClient {
                                       method: method,
                                       task: task,
                                       headers: headers)
-        return moya.rx.request(target)
-            .filterSuccessfulStatusCodes()
-            .autoRelogOnUnauthorized()
+        let originalRequest = moya.rx.request(target)
+        return autoRelogOnUnauthorized(originalRequest)
+    }
+}
+
+private extension HTTPClient {
+    /// Invoke login while unauthorized
+    /// If succeed then retry request, else definitely fail
+    func autoRelogOnUnauthorized(_ original: Single<Moya.Response>) -> Single<Moya.Response> {
+        original.catch { error in
+            guard strongAuthErrorHandler.isUnauthorizedError(error) else {
+                return .error(error)
+            }
+
+            return loginOnError(error)
+                .flatMap { _ in original.retry(1) }
+        }
+    }
+
+    func loginOnError(_ error: Error) -> Single<Void> {
+        Single.create { observer in
+            let callback: AuthenticationCallback = { success in
+                if success {
+                    observer(.success(Void()))
+                } else {
+                    observer(.failure(error))
+                }
+            }
+
+            strongAuthErrorHandler.handleUnauthorizedError(error: error, callBack: callback)
+
+            return Disposables.create()
+        }
     }
 }
 
