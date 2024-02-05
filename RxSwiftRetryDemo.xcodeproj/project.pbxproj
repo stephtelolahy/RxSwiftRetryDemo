@@ -12,6 +12,9 @@
 		267C60B42B70A8170039372C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267C60B32B70A8170039372C /* Assets.xcassets */; };
 		267C60B72B70A8170039372C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267C60B62B70A8170039372C /* Preview Assets.xcassets */; };
 		267C60C12B70A8170039372C /* RxSwiftRetryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */; };
+		267C60DC2B70A9070039372C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60DB2B70A9070039372C /* HTTPClient.swift */; };
+		267C60DF2B70A9E80039372C /* Single+AutoRelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60DE2B70A9E80039372C /* Single+AutoRelog.swift */; };
+		267C60E12B70AB070039372C /* StrongAuthErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60E02B70AB070039372C /* StrongAuthErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,9 @@
 		267C60B62B70A8170039372C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		267C60BC2B70A8170039372C /* RxSwiftRetryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftRetryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftRetryDemoTests.swift; sourceTree = "<group>"; };
+		267C60DB2B70A9070039372C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		267C60DE2B70A9E80039372C /* Single+AutoRelog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+AutoRelog.swift"; sourceTree = "<group>"; };
+		267C60E02B70AB070039372C /* StrongAuthErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongAuthErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		267C60AE2B70A8160039372C /* RxSwiftRetryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				267C60DA2B70A8FA0039372C /* HTTPClient */,
 				267C60AF2B70A8160039372C /* RxSwiftRetryDemoApp.swift */,
 				267C60B12B70A8160039372C /* ContentView.swift */,
 				267C60B32B70A8170039372C /* Assets.xcassets */,
@@ -95,6 +102,16 @@
 				267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */,
 			);
 			path = RxSwiftRetryDemoTests;
+			sourceTree = "<group>";
+		};
+		267C60DA2B70A8FA0039372C /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				267C60DB2B70A9070039372C /* HTTPClient.swift */,
+				267C60DE2B70A9E80039372C /* Single+AutoRelog.swift */,
+				267C60E02B70AB070039372C /* StrongAuthErrorHandler.swift */,
+			);
+			path = HTTPClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +182,7 @@
 			mainGroup = 267C60A32B70A8160039372C;
 			packageReferences = (
 				267C60D92B70A8340039372C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				267C60DD2B70A95E0039372C /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 267C60AD2B70A8160039372C /* Products */;
 			projectDirPath = "";
@@ -200,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267C60DF2B70A9E80039372C /* Single+AutoRelog.swift in Sources */,
+				267C60E12B70AB070039372C /* StrongAuthErrorHandler.swift in Sources */,
 				267C60B22B70A8160039372C /* ContentView.swift in Sources */,
 				267C60B02B70A8160039372C /* RxSwiftRetryDemoApp.swift in Sources */,
+				267C60DC2B70A9070039372C /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +497,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.6.0;
+			};
+		};
+		267C60DD2B70A95E0039372C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
