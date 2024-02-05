@@ -12,19 +12,10 @@
 		267C60B42B70A8170039372C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267C60B32B70A8170039372C /* Assets.xcassets */; };
 		267C60B72B70A8170039372C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267C60B62B70A8170039372C /* Preview Assets.xcassets */; };
 		267C60C12B70A8170039372C /* RxSwiftRetryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */; };
-		267C60CB2B70A8170039372C /* RxSwiftRetryDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60CA2B70A8170039372C /* RxSwiftRetryDemoUITests.swift */; };
-		267C60CD2B70A8170039372C /* RxSwiftRetryDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C60CC2B70A8170039372C /* RxSwiftRetryDemoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		267C60BD2B70A8170039372C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 267C60A42B70A8160039372C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 267C60AB2B70A8160039372C;
-			remoteInfo = RxSwiftRetryDemo;
-		};
-		267C60C72B70A8170039372C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 267C60A42B70A8160039372C /* Project object */;
 			proxyType = 1;
@@ -41,9 +32,6 @@
 		267C60B62B70A8170039372C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		267C60BC2B70A8170039372C /* RxSwiftRetryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftRetryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftRetryDemoTests.swift; sourceTree = "<group>"; };
-		267C60C62B70A8170039372C /* RxSwiftRetryDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftRetryDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		267C60CA2B70A8170039372C /* RxSwiftRetryDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftRetryDemoUITests.swift; sourceTree = "<group>"; };
-		267C60CC2B70A8170039372C /* RxSwiftRetryDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftRetryDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		267C60C32B70A8170039372C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +57,6 @@
 			children = (
 				267C60AE2B70A8160039372C /* RxSwiftRetryDemo */,
 				267C60BF2B70A8170039372C /* RxSwiftRetryDemoTests */,
-				267C60C92B70A8170039372C /* RxSwiftRetryDemoUITests */,
 				267C60AD2B70A8160039372C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +66,6 @@
 			children = (
 				267C60AC2B70A8160039372C /* RxSwiftRetryDemo.app */,
 				267C60BC2B70A8170039372C /* RxSwiftRetryDemoTests.xctest */,
-				267C60C62B70A8170039372C /* RxSwiftRetryDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				267C60C02B70A8170039372C /* RxSwiftRetryDemoTests.swift */,
 			);
 			path = RxSwiftRetryDemoTests;
-			sourceTree = "<group>";
-		};
-		267C60C92B70A8170039372C /* RxSwiftRetryDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				267C60CA2B70A8170039372C /* RxSwiftRetryDemoUITests.swift */,
-				267C60CC2B70A8170039372C /* RxSwiftRetryDemoUITestsLaunchTests.swift */,
-			);
-			path = RxSwiftRetryDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = 267C60BC2B70A8170039372C /* RxSwiftRetryDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		267C60C52B70A8170039372C /* RxSwiftRetryDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 267C60D62B70A8170039372C /* Build configuration list for PBXNativeTarget "RxSwiftRetryDemoUITests" */;
-			buildPhases = (
-				267C60C22B70A8170039372C /* Sources */,
-				267C60C32B70A8170039372C /* Frameworks */,
-				267C60C42B70A8170039372C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				267C60C82B70A8170039372C /* PBXTargetDependency */,
-			);
-			name = RxSwiftRetryDemoUITests;
-			productName = RxSwiftRetryDemoUITests;
-			productReference = 267C60C62B70A8170039372C /* RxSwiftRetryDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +152,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 267C60AB2B70A8160039372C;
 					};
-					267C60C52B70A8170039372C = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 267C60AB2B70A8160039372C;
-					};
 				};
 			};
 			buildConfigurationList = 267C60A72B70A8160039372C /* Build configuration list for PBXProject "RxSwiftRetryDemo" */;
@@ -215,13 +163,15 @@
 				Base,
 			);
 			mainGroup = 267C60A32B70A8160039372C;
+			packageReferences = (
+				267C60D92B70A8340039372C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 267C60AD2B70A8160039372C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				267C60AB2B70A8160039372C /* RxSwiftRetryDemo */,
 				267C60BB2B70A8170039372C /* RxSwiftRetryDemoTests */,
-				267C60C52B70A8170039372C /* RxSwiftRetryDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +187,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		267C60BA2B70A8170039372C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		267C60C42B70A8170039372C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,15 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		267C60C22B70A8170039372C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				267C60CD2B70A8170039372C /* RxSwiftRetryDemoUITestsLaunchTests.swift in Sources */,
-				267C60CB2B70A8170039372C /* RxSwiftRetryDemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +220,6 @@
 			isa = PBXTargetDependency;
 			target = 267C60AB2B70A8160039372C /* RxSwiftRetryDemo */;
 			targetProxy = 267C60BD2B70A8170039372C /* PBXContainerItemProxy */;
-		};
-		267C60C82B70A8170039372C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 267C60AB2B70A8160039372C /* RxSwiftRetryDemo */;
-			targetProxy = 267C60C72B70A8170039372C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -508,40 +437,6 @@
 			};
 			name = Release;
 		};
-		267C60D72B70A8170039372C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.RxSwiftRetryDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxSwiftRetryDemo;
-			};
-			name = Debug;
-		};
-		267C60D82B70A8170039372C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.RxSwiftRetryDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RxSwiftRetryDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,16 +467,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		267C60D62B70A8170039372C /* Build configuration list for PBXNativeTarget "RxSwiftRetryDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				267C60D72B70A8170039372C /* Debug */,
-				267C60D82B70A8170039372C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		267C60D92B70A8340039372C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 267C60A42B70A8160039372C /* Project object */;
 }
